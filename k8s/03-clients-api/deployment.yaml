@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: clients-api
+  namespace: clients-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: clients-api
+  template:
+    metadata:
+      labels:
+        app: clients-api
+    spec:
+      containers:
+      - name: clients-api
+        image: ghcr.io/YOUR_USERNAME/clients-api:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGODB_URI
+          value: "mongodb://mongodb:27017/clients"
