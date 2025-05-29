@@ -469,4 +469,4 @@ kubectl logs -n clients-api deploy/clients-api
 
 
 
-Now the clients API is fully containerized, deployed, and automated with CI/CD, TLS, and Load Balancing.
+* Now the clients API is fully containerized, deployed, and automated with CI/CD, TLS, and Load Balancing.
